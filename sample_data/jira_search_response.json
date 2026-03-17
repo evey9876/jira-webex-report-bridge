@@ -1,0 +1,44 @@
+{
+  "issues": [
+    {
+      "key": "OPS-101",
+      "fields": {
+        "summary": "Launch reporting template for leadership weekly update",
+        "status": { "name": "Done" },
+        "assignee": { "displayName": "Eva Russell" },
+        "priority": { "name": "High" },
+        "duedate": "2026-03-18",
+        "labels": ["leadership", "reporting"],
+        "issuetype": { "name": "Task" },
+        "updated": "2026-03-16T09:00:00.000+0000"
+      }
+    },
+    {
+      "key": "OPS-102",
+      "fields": {
+        "summary": "Resolve data mismatch in Jira rollup dashboard",
+        "status": { "name": "Blocked" },
+        "assignee": { "displayName": "Data Team" },
+        "priority": { "name": "Highest" },
+        "duedate": "2026-03-19",
+        "labels": ["risk", "dashboard"],
+        "issuetype": { "name": "Bug" },
+        "updated": "2026-03-17T08:15:00.000+0000"
+      }
+    },
+    {
+      "key": "OPS-103",
+      "fields": {
+        "summary": "Prepare Webex notification test for management distribution",
+        "status": { "name": "In Progress" },
+        "assignee": { "displayName": "Eva Russell" },
+        "priority": { "name": "Medium" },
+        "duedate": "2026-03-20",
+        "labels": ["webex", "automation"],
+        "issuetype": { "name": "Story" },
+        "updated": "2026-03-17T07:45:00.000+0000"
+      }
+    }
+  ]
+}
+

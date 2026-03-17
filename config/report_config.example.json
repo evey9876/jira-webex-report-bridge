@@ -1,0 +1,47 @@
+{
+  "jira": {
+    "base_url": "https://your-domain.atlassian.net",
+    "email": "your-email@example.com",
+    "api_token": "replace-me",
+    "jql": "project = OPS AND updated >= -7d ORDER BY priority DESC, updated DESC",
+    "max_results": 25,
+    "fields": [
+      "summary",
+      "status",
+      "assignee",
+      "priority",
+      "duedate",
+      "labels",
+      "issuetype",
+      "updated"
+    ]
+  },
+  "report": {
+    "title": "Weekly Jira Delivery Update",
+    "audience": "Boss",
+    "owner_name": "Eva",
+    "intro": "Here is the latest Jira reporting snapshot.",
+    "done_statuses": ["Done", "Closed", "Resolved"],
+    "in_progress_statuses": ["In Progress", "In Review", "Selected for Development"],
+    "blocked_statuses": ["Blocked"],
+    "risk_priorities": ["Highest", "High"],
+    "top_n": 5,
+    "references": [
+      "Reporting window: last 7 days",
+      "Source: Jira Cloud project OPS"
+    ],
+    "parameters": {
+      "project": "OPS",
+      "window_days": 7,
+      "jql_owner": "Eva"
+    }
+  },
+  "webex": {
+    "access_token": "replace-me",
+    "room_id": "replace-me"
+  },
+  "output": {
+    "directory": "output"
+  }
+}
+
