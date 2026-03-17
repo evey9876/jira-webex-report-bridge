@@ -38,10 +38,11 @@
   },
   "webex": {
     "access_token": "replace-me",
-    "room_id": "replace-me"
+    "room_id": null,
+    "to_person_email": "boss@example.com",
+    "to_person_id": null
   },
   "output": {
     "directory": "output"
   }
 }
-

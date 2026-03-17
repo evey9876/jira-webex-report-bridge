@@ -34,7 +34,9 @@ class ReportConfig:
 @dataclass(frozen=True)
 class WebexConfig:
     access_token: str
-    room_id: str
+    room_id: str | None
+    to_person_email: str | None
+    to_person_id: str | None
 
 
 @dataclass(frozen=True)
@@ -86,11 +88,12 @@ def load_settings(config_path: str | Path) -> Settings:
         ),
         webex=WebexConfig(
             access_token=webex_data["access_token"],
-            room_id=webex_data["room_id"],
+            room_id=webex_data.get("room_id"),
+            to_person_email=webex_data.get("to_person_email"),
+            to_person_id=webex_data.get("to_person_id"),
         ),
         output=OutputConfig(
             directory=(path.parent / output_data.get("directory", "output")).resolve()
         ),
         config_path=path,
     )
-

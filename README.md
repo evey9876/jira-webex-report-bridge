@@ -71,7 +71,10 @@ Then fill in:
 - `jira.api_token`
 - `jira.jql`
 - `webex.access_token`
-- `webex.room_id`
+- one Webex target:
+  - `webex.room_id`
+  - `webex.to_person_email`
+  - `webex.to_person_id`
 
 You can also control:
 
@@ -107,6 +110,8 @@ Run the full flow and send to Webex:
 jira-webex-report send --config config/report_config.json
 ```
 
+To send directly to a person instead of a room, leave `room_id` as `null` and set `to_person_email` or `to_person_id`.
+
 ## Output
 
 The package writes:
@@ -135,10 +140,16 @@ If your Jira site uses a different setup, adjust `jira_client.py`.
 
 ## Webex assumptions
 
-The package sends a plain text message to a Webex room using:
+The package sends a plain text message to Webex using:
 
 - endpoint: `https://webexapis.com/v1/messages`
 - auth: bearer token
+
+Supported targets:
+
+- room via `roomId`
+- direct user message via `toPersonEmail`
+- direct user message via `toPersonId`
 
 If you prefer a richer card format later, extend `webex_client.py`.
 
@@ -149,4 +160,3 @@ python3 -m unittest discover -s tests
 ```
 
 The included sample Jira payload lets you validate the report shape without Jira or Webex credentials.
-
